@@ -1,0 +1,212 @@
+/* Import Google Font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+    line-height: 1.5;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #6495ed;
+}
+
+.wrapper{
+    width: 400px;
+    background: #ffffff;
+    border-radius: 7px;
+}
+
+header{
+    color: #6495ed;
+    font-size: 1.5rem;
+    font-weight: 500;
+    border-bottom: 1px solid #bfbfbf;
+    padding: .6em .5em;
+    display: flex;
+    align-items: center;
+}
+
+header i{
+    font-size: 0px;
+    cursor: pointer;
+    margin-right: 12px;
+}
+
+.wrapper.active header i{
+    font-size: 30px;
+    margin-left: 5px;
+}
+
+.input-part{
+    margin: 20px 25px 30px;
+}
+
+.wrapper.active .input-part{
+    display: none;
+}
+
+.input-part .info-text{
+    display: none;
+    text-align: center;
+    font-size: 1rem;
+    padding: 12px 10px;
+    border-radius: 7px;
+    margin-bottom: 15px;
+}
+
+.info-text.error{
+    display: block;
+    color: #721c24;
+    background: #f8d7da;
+    border: 1px solid #f5c6cb;
+}
+
+.info-text.pending{
+    display: block;
+    color: #0c5460;
+    background: #d1ecf1;
+    border: 1px solid #bee5eb;
+}
+
+.input-part :where(input,button){
+    width: 100%;
+    height: 55px;
+    border: none;
+    outline: none;
+    border-radius: 7px;
+    font-size: 1.1rem;
+    
+}
+
+.input-part input{
+    border: 1px solid #bfbfbf;
+    text-align: center;
+}
+
+.input-part input:is(:focus, :valid){
+    border: 2px solid #43AFFC;
+}
+
+.input-part .separator{
+    width: 100%;
+    height: 1px;
+    margin: 25px 0;
+    background-color: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.separator::before{
+    content: "or";
+    color: #ccc;
+    background-color: #ffffff;
+    padding: 0 15px;
+    font-size: 1.2rem;
+    
+}
+
+.input-part button{
+    color: #ffffff;
+    background-color: #6495ed;
+    cursor: pointer;
+}
+
+.weather-part{
+    margin: 30px 0 0;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper.active .weather-part{
+    display: flex;
+}
+
+.weather-part img{
+    max-width: 125px;
+}
+
+.weather-part .temp{
+    display: flex;
+    font-size: 72px;
+    font-weight: 500;
+}
+
+.weather-part .temp .num{
+    font-weight: 600;
+}
+
+.weather-part .temp .deg{
+    display: block;
+    font-size: 40px;
+    margin: 10px 5px 0 0;
+}
+
+.weather-part .weather{
+    font-size: 21px;
+    text-align: center;
+    margin: -5px 20px 15px;
+}
+
+.weather-part .location{
+    font-size: 21px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.location i{
+    font-size: 22px;
+    margin-right: 5px;
+}
+
+.weather-part .bottom-details{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #bfbfbf;
+}
+
+.bottom-details .column{
+    width: 100%;
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.column i{
+    font-size: 40px;
+    color: #43AFFC;
+}
+
+.column.humidity{
+    border-left: 2px solid #bfbfbf;
+}
+
+.details .temp, .humidity span{
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: -3px;
+}
+
+.details .temp .deg{
+    font-size: 17px;
+    margin: 0;
+    padding: 0 2px 0 1px;
+}
+
+.details p{
+    font-size: 14px;
+    margin-top: -6px; 
+}
